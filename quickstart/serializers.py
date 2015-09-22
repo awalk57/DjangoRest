@@ -12,3 +12,12 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         model = Group
         fields = ('url', 'name')
 
+class UrlSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Urls
+        fields = ('url', 'url_text')
+
+class AppSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Applications
+        fields = ('url','application_name' )
